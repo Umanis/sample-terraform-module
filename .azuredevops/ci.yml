@@ -1,0 +1,23 @@
+trigger:
+  branches:
+    include:
+      - master
+      - develop
+      - release/*
+      - feature/*
+
+resources:
+  repositories:
+  - repository: github
+    type: github
+    name: Umanis/terraform-azurerm-resource-group
+    endpoint: Umanis
+    ref: master
+  - repository: templates
+    type: git
+    name: terraform/terraform-pipeline
+
+extends:
+  template: ./terraform-module-ci.yml@templates
+  parameters:
+    MODULE_DIR: 'mod_azu_resource_group'

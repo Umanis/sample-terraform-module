@@ -1,0 +1,13 @@
+#  Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.lock.hcl
+*.tfplan
+
+# GoLang
+go.sum
+
+# vs
+**/.vs/*
